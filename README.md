@@ -50,7 +50,7 @@ We recommend using [VS Code](https://code.visualstudio.com/) with [Volar](https:
 
 ### GitHub Template
 
-[Create a repo from this template on GitHub](https://github.com/antfu/vitesse-nuxt3/generate).
+[Create a repo from this template on GitHub](https://github.com/next-dev-team/nuxt3-biolerplate/generate).
 
 ### Clone to local
 
