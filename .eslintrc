@@ -1,6 +1,7 @@
 {
   "extends": "@antfu",
   "rules": {
-    "@typescript-eslint/consistent-type-definitions":0
+    "@typescript-eslint/consistent-type-definitions":0,
+    "jsonc/sort-keys":0
   }
 }

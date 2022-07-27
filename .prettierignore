@@ -1,0 +1,11 @@
+# IDE
+.idea
+node_modules
+*.log
+
+dist
+.output
+.nuxt
+.env
+
+.tw-preview

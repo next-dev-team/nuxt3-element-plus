@@ -2,11 +2,12 @@ import { defineStore } from 'pinia'
 import { devMenu } from '../constants'
 
 type ITheme = 'theme.tailwind' | 'theme.plugin'
+type IIcons = 'icon.carbon'
 type IComponents = 'com.next-dev' | 'com.headless'
 
 export type AppState = {
   toolboxModal?: boolean
-  activeDevMenu: { title: string; icon?: string; iframeUrl?: string; disabled?: boolean; render?: ITheme | IComponents }
+  activeDevMenu: { title: string; icon?: string; iframeUrl?: string; disabled?: boolean; render?: ITheme | IComponents | IIcons }
 }
 
 export const useAppStore = defineStore('useAppStore', {
