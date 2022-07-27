@@ -11,7 +11,6 @@
     "upgrade-dp": "pnpm up",
     "postinstall": "nuxi prepare && husky install",
     "lint": "eslint .",
-    "lint-staged": "lint-staged",
     "lint-fix": "eslint . --fix",
     "prepare": "husky install",
     "clean": "rm -rf .nuxt dist .output .tw-preview",
@@ -55,14 +54,8 @@
   },
   "lint-staged": {
     "**/*.{ts,vue,html,css,scss}": [
-      "pnpm lint-fix",
-      "git add"
+      "pnpm lint-fix"
     ]
   },
-  "license": "MIT",
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  }
+  "license": "MIT"
 }
