@@ -23,7 +23,6 @@
 - 🦾 TypeScript, of course
 - 🔥 The `<script setup>` syntax
 - 🔥 Eslint & Prettier
-- 🔥 Husky & Commitlint
 - 🏎 Zero-config cloud functions and deploy
 
 

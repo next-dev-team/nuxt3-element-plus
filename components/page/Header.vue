@@ -17,7 +17,5 @@ const isDev = import.meta.env.DEV && !import.meta.env.SSR && screen.width > 600
       <slot />
     </div>
   </header>
-  <ClientOnly v-if="isDev">
-    <DevOnlyToolbox />
-  </ClientOnly>
+  <DevOnlyToolbox />
 </template>
