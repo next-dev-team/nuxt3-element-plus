@@ -22,10 +22,7 @@
 - 📥 auto importing - for Components, Composition API, VueUse and custom composables.
 - 🦾 TypeScript, of course
 - 🔥 The `<script setup>` syntax
-- 🔥 Eslint & Prettier
-- 🏎 Zero-config cloud functions and deploy
-
-
+- 🔥 Eslint + Prettier & Huksy + LintStage + Commitlint
 
 ## Plugins
 
