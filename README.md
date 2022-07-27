@@ -16,7 +16,7 @@
 - 🍍 [State Management via Pinia](https://pinia.esm.dev), see [./stores/app.ts](./stores/app.ts)
 - 🌙 Switch Theme (light, dark, system, realtime)
 - 📑 [Layout system](./layouts): header,footer, Narbar, login, register etc
-- 🚩 [Localization (i18n-next)](https://github.com/intlify/vue-i18n-next/tree/master/examples/frameworks/nuxt3): easy to use with vue-i18n-next `$t('welcome to', {name: 'Nuxt3', otherName:'2022'})`
+- 🚩 [Localization (i18n-next)](https://github.com/intlify/vue-i18n-next): easy to use with vue-i18n-next `$t('welcome to', {name: 'Nuxt3', otherName:'2022'})`
 - 🔥 Language Switcher
 - ⚡️ Vite - Instant HMR
 - 📥 auto importing - for Components, Composition API, VueUse and custom composables.

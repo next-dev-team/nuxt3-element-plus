@@ -28,7 +28,7 @@ const getActiveChild = (itemCh: any): boolean => {
         }"
       >
         {{ item.title }}
-        <UnoIcon v-if="item?.children" class="i-carbon:arrow-down ml-1" :class="{ 'text-primary-600': getActiveMain(item) }" />
+        <i-carbon:arrow-down v-if="item?.children" class="ml-1" :class="{ 'text-primary-600': getActiveMain(item) }" />
       </MenuButton>
 
       <transition
