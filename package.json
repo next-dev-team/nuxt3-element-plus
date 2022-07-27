@@ -55,10 +55,14 @@
   },
   "lint-staged": {
     "**/*.{ts,vue,html,css,scss}": [
-      "pnpm lint-fix"
+      "pnpm lint-fix",
+      "git add"
     ]
   },
-   "gitHooks": {
-    "commit-msg": "fabric verify-commit"
+  "license": "MIT",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   }
 }
