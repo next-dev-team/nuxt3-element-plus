@@ -10,7 +10,6 @@ export default defineNuxtConfig({
     dirs: [
       // Scan composables from nested directories
       'composables/**',
-      'stores/**',
     ],
   },
   modules: [

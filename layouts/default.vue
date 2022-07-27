@@ -1,9 +1,9 @@
 <template>
-  <main>
+  <div>
     <PageHeader />
     <div class="min-h-[35vh]">
       <slot />
     </div>
     <PageFooter />
-  </main>
+  </div>
 </template>

@@ -17,7 +17,7 @@
     "lint": "eslint .",
     "lint-fix": "eslint . --fix",
     "prepare": "husky install",
-    "clean": "rm -rf .nuxt dist .output .tw-preview",
+    "clean": "rm -rf .nuxt dist .output .tw-preview && pnpm postinstall",
     "clean:node": "rm -rf node_modules"
   },
   "dependencies": {
