@@ -58,7 +58,7 @@
       "pnpm lint-fix"
     ]
   },
-  "gitHooks": {
-    "commit-msg": "./verifyCommit.ts"
+   "gitHooks": {
+    "commit-msg": "fabric verify-commit"
   }
 }
