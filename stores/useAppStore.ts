@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia'
-import { devMenu } from '../constants'
+import { devMenu } from '~~/constants'
 
 type ITheme = 'theme.tailwind' | 'theme.plugin'
 type IIcons = 'icon.carbon'

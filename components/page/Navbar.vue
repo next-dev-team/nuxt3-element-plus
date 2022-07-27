@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { useAppStore } from '~~/stores/app'
+import { useAppStore } from '~~/stores/useAppStore'
 
 const store = useAppStore()
 </script>
@@ -61,7 +61,7 @@ const store = useAppStore()
           class="flex h-10 w-10 items-center justify-center rounded-lg bg-gray-100 dark:bg-gray-700"
           @click="store.toggleToolboxModal"
         >
-          <i:phsliders class="text-lg dark:text-white text-orange-400" />
+          <UnoIcon class="i-ph-sliders-bold text-lg dark:text-white text-orange-400" />
         </button>
       </div>
     </div>

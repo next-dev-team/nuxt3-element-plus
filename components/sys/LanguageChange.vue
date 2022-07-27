@@ -25,7 +25,7 @@ const localeUserSetting = localeSetting.value
         <div
           class="flex h-10 w-10 items-center justify-center rounded-lg bg-gray-100 dark:bg-gray-700"
         >
-          <IPhTranslateBold class="text-lg dark:text-white" />
+          <UnoIcon class="i-ph-translate-bold text-lg dark:text-white" />
         </div>
       </ListboxButton>
       <ListboxOptions
@@ -48,8 +48,7 @@ const localeUserSetting = localeSetting.value
             {{ lang.name }}
           </span>
           <span class="flex items-center justify-center text-sm">
-            <IEmojioneV1FlagForChina v-if="lang.iso === 'zh-CN'" class="text-base" />
-            <ITwemojiFlagUsOutlyingIslands v-if="lang.iso === 'en-Us'" class="text-base" />
+            <UnoIcon :class="lang.flag" class="text-base" />
           </span>
         </ListboxOption>
       </ListboxOptions>

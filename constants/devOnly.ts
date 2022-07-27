@@ -1,4 +1,4 @@
-import type { AppState } from '../stores/app'
+import type { AppState } from '../stores/useAppStore'
 
 type IMenu = Array<AppState['activeDevMenu'] & { children?: Partial<AppState['activeDevMenu']>[] }>
 

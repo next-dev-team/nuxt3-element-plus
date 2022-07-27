@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/vue'
 import { devMenu } from '~/constants'
-import { useAppStore } from '~~/stores/app'
+import { useAppStore } from '~~/stores/useAppStore'
 const appStore = useAppStore()
 
 const getActiveMain = (item: any = {}) => {
@@ -28,7 +28,7 @@ const getActiveChild = (itemCh: any): boolean => {
         }"
       >
         {{ item.title }}
-        <i-carbon:arrow-down v-if="item?.children" class="ml-1" :class="{ 'text-primary-600': getActiveMain(item) }" />
+        <UnoIcon v-if="item?.children" class="i-carbon:arrow-down  ml-1" :class="{ 'text-primary-600': getActiveMain(item) }" />
       </MenuButton>
 
       <transition

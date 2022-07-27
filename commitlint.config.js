@@ -21,3 +21,5 @@ module.exports = {
     ],
   },
 }
+
+// git commit -m 'docs: update readme'

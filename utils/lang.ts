@@ -1,11 +1,12 @@
 import { useI18n } from 'vue-i18n'
 
-type LocaleKey = 'en-Us' | 'zh-CN'
+type ILocaleKey = 'en-Us' | 'zh-CN'
 
 export type ILocales = {
-  [key in LocaleKey]: {
+  [key in ILocaleKey]: {
     name: string
-    iso: LocaleKey
+    iso: string
+    flag: string
   }
 }
 
@@ -13,10 +14,12 @@ const availableLocales: ILocales = {
   'en-Us': {
     name: 'English',
     iso: 'en-Us',
+    flag: 'i-twemoji-flag-us-outlying-islands',
   },
   'zh-CN': {
     name: '中 文',
     iso: 'zh-CN',
+    flag: 'i-twemoji-flag-china',
   },
 
 }

@@ -3,6 +3,7 @@
     "antfu.iconify",
     "antfu.goto-alias",
     "dbaeumer.vscode-eslint",
-    "vue.volar"
+    "vue.volar",
+    "afzalsayed96.icones"
   ]
 }
