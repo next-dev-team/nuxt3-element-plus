@@ -82,17 +82,11 @@ export default defineNuxtConfig({
 
   // css
   css: [
+    'assets/scss/index.scss',
     'assets/scss/element/dark.scss',
   ],
   tailwindcss: {
-    cssPath: 'assets/tailwind.css',
-    configPath: 'tailwind.config.js',
-    injectPosition: {
-      // 'low-priority' will have lower priority than Tailwind stylesheet,
-      // while 'high-priorty' will override it
-      after: 'assets/scss/element/dark.scss',
-    },
-    viewer: false,
+    cssPath: '~/assets/tailwind.css',
   },
 
   vite: {
