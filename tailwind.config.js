@@ -17,7 +17,30 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: colors.yellow,
+        title: {
+          50: '#d1d5db',
+          100: '#9ca3af',
+          200: '#6b7280',
+          300: '#707a8a',
+          400: '#4b5563',
+          500: '#374151',
+          600: '#181a20',
+          700: '#1f2937',
+          800: '#111827',
+          900: '#000',
+        },
+        primary: {
+          50: '#fefce8',
+          100: '#fef9c3',
+          200: '#fef08a',
+          300: '#fcd535',
+          400: '#facc15',
+          500: '#eab308',
+          600: '#ca8a04',
+          700: '#a16207',
+          800: '#854d0e',
+          900: '#713f12',
+        },
       },
       fontFamily: {
         sans: ['"Inter var"', ...defaultTheme.fontFamily.sans],

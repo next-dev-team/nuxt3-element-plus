@@ -10,6 +10,11 @@ const lifecycle = process.env.npm_lifecycle_event
 const isProd = process.env.NODE_ENV === 'production'
 
 export default defineNuxtConfig({
+  runtimeConfig: {
+    public: {
+      apiBase: '', // can be overridden by NUXT_PUBLIC_API_BASE environment variable
+    },
+  },
   // default meta
   meta: {
     title: 'Element Plus + Nuxt 3',
@@ -26,10 +31,11 @@ export default defineNuxtConfig({
 
   // ...
   autoImports: {
-    dirs: [
-      // Scan composables from nested directories
-      'composables/**',
-    ],
+    global: true,
+    // dirs: [
+    //   // Scan composables from nested directories
+    //   'composables/**',
+    // ],
   },
   // auto import components
   components: true,

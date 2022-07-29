@@ -1,5 +1,7 @@
 {
   "welcomePage": "Welcome to {name} !",
   "language": "Language",
-  "login": "login"
+  "login": "login",
+  "email": "email",
+  "phone": "phone"
 }
