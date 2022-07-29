@@ -18,7 +18,7 @@
     "lint-fix": "eslint . --fix",
     "prepare": "husky install",
     "clean": "rm -rf .nuxt dist .output .tw-preview && pnpm postinstall",
-    "clean:node": "rm -rf node_modules"
+    "clean:node": "pnpm store prune && rm -rf node_modules"
   },
   "dependencies": {
     "@headlessui/vue": "1.6.7",
@@ -34,9 +34,14 @@
     "@vueuse/nuxt": "^8.9.4",
     "nuxt": "^3.0.0-rc.6",
     "pinia": "^2.0.17",
-    "vue-i18n": "^9.1.10"
+    "vue-i18n": "^9.1.10",
+    "@element-plus/icons-vue": "^2.0.6",
+    "element-plus": "^2.2.9"
   },
   "devDependencies": {
+    "unplugin-element-plus": "^0.4.1",
+    "unplugin-icons": "^0.14.7",
+    "unplugin-vue-components": "^0.21.1",
     "@antfu/eslint-config": "^0.25.2",
     "@commitlint/cli": "^17.0.3",
     "@commitlint/config-conventional": "^17.0.3",
@@ -48,12 +53,12 @@
     "prettier": "2.7.1",
     "prettier-plugin-tailwindcss": "0.1.13",
     "sass": "1.54.0",
-    "sass-loader": "13.0.2",
     "serve": "^14.0.1",
-    "typescript": "^4.7.4"
+    "typescript": "^4.7.4",
+    "sass-loader": "13.0.2"
   },
   "lint-staged": {
-    "**/*.{ts,vue,html,css,scss}": [
+    "**/*.{ts,vue,html}": [
       "pnpm lint-fix"
     ]
   },

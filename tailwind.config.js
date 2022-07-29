@@ -1,9 +1,7 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
-/** @type {import('tailwindcss/types').Config} */
-
 const defaultTheme = require('tailwindcss/defaultTheme')
 const colors = require('tailwindcss/colors')
 
+/** @type {import('tailwindcss/types').Config} */
 module.exports = {
   darkMode: 'class',
   content: [
@@ -15,17 +13,9 @@ module.exports = {
     './assets/**/*.scss',
     './assets/**/*.css',
   ],
+
   theme: {
     extend: {
-      colors: {
-        primary: colors.yellow,
-      },
-      fontFamily: {
-        sans: ['"Inter var"', ...defaultTheme.fontFamily.sans],
-      },
-    },
-    // https://github.com/rogden/tailwind-config-viewer#configuration
-    configViewer: {
       colors: {
         primary: colors.yellow,
       },
@@ -38,10 +28,8 @@ module.exports = {
     extend: {},
   },
   plugins: [
-    require('@tailwindcss/forms'),
     require('@tailwindcss/typography'),
     require('@tailwindcss/line-clamp'),
     require('@tailwindcss/aspect-ratio'),
   ],
-
 }
