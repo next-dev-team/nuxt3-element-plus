@@ -45,6 +45,12 @@ export default defineNuxtConfig({
     classSuffix: '',
   },
   vite: {
+    // Windows hot fix
+    server: {
+      watch: {
+        usePolling: true,
+      },
+    },
     resolve: {
       alias: {
         'vue-i18n': 'vue-i18n/dist/vue-i18n.runtime.esm-bundler.js',
