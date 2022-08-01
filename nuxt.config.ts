@@ -28,14 +28,28 @@ export default defineNuxtConfig({
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
+  buildModules: [
+    // ...
+    [
+      '@pinia/nuxt',
+      {
+        autoImports: [
+          // automatically imports `usePinia()`
+          'defineStore',
+          'acceptHMRUpdate',
+          // automatically imports `usePinia()` as `usePiniaStore()`
+          ['defineStore', 'definePiniaStore'],
+        ],
+      },
+    ],
+  ],
 
   // ...
   autoImports: {
-    global: true,
-    // dirs: [
-    //   // Scan composables from nested directories
-    //   'composables/**',
-    // ],
+    dirs: [
+      // Scan composables from nested directories
+      'composables/**'
+    ]
   },
   // auto import components
   components: true,
@@ -59,6 +73,8 @@ export default defineNuxtConfig({
         ? ['element-plus']
         : []),
     ],
+
+
   },
 
   experimental: {
@@ -117,27 +133,27 @@ export default defineNuxtConfig({
     plugins: isProd
       ? [
 
-          ElementPlus({
-            useSource: true,
-          }),
-          Components({
-            dts: false,
-            resolvers: [
-              IconsResolver(),
-            ],
-          }),
-          VueI18nVitePlugin({
-            include: [
-              resolve(dirname(fileURLToPath(import.meta.url)), './locales/*.json'),
-            ],
-          }),
-        ]
+        ElementPlus({
+          useSource: true,
+        }),
+        Components({
+          dts: false,
+          resolvers: [
+            IconsResolver(),
+          ],
+        }),
+        VueI18nVitePlugin({
+          include: [
+            resolve(dirname(fileURLToPath(import.meta.url)), './locales/*.json'),
+          ],
+        }),
+      ]
       : [
-          VueI18nVitePlugin({
-            include: [
-              resolve(dirname(fileURLToPath(import.meta.url)), './locales/*.json'),
-            ],
-          }),
-        ],
+        VueI18nVitePlugin({
+          include: [
+            resolve(dirname(fileURLToPath(import.meta.url)), './locales/*.json'),
+          ],
+        }),
+      ],
   },
 })

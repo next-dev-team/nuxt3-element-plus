@@ -4,8 +4,8 @@ import type { UseFetchOptions } from '#app'
 
 export const $useFetch = async <DataT>(url: string, options: UseFetchOptions<DataT> = {}) => {
   const open = () => {
-    ElMessageBox.confirm(
-      'It will permanently delete the file. Continue?',
+    ElMessageBox.alert(
+      'something went wrong',
       'Warning',
       {
         type: 'warning',
@@ -14,18 +14,19 @@ export const $useFetch = async <DataT>(url: string, options: UseFetchOptions<Dat
     )
   }
 
-  const token = useDark()
+  const { userProfile } = useUserStore()
   let headers = {}
 
-  if (token.value) {
+  if (false) {
     headers = {
       ...options.headers,
-      authentication: `Bearer ${token.value}`,
+      // authorization: `Bearer ${userProfile?.value?.token}`,
     }
   }
 
   try {
     const res = await $fetch(`${useRuntimeConfig().public.apiBase}${url}`, {
+      method: 'get',
       ...options,
       headers,
     })
@@ -34,8 +35,10 @@ export const $useFetch = async <DataT>(url: string, options: UseFetchOptions<Dat
 
     return res
   }
-  catch {
-    open({ message: 'something went wrong', title: 'Error' })
+  catch (err) {
+    console.log('err', err);
+
+    open()
   }
 }
 

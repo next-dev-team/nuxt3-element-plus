@@ -1,1 +1,1 @@
-export * from './devOnly'
+export * from './colors'
